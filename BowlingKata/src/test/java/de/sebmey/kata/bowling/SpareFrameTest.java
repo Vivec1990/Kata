@@ -48,7 +48,7 @@ public class SpareFrameTest {
 	}
 	
 	@Test
-	public void testSpareFrameCreatioNWithInvalidInputLength() {
+	public void testSpareFrameCreationWithInvalidInputLength() {
 		final String tooShortInput = "/";
 		thrown.expect(IllegalArgumentException.class);
 		new SpareFrame(tooShortInput);
