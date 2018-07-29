@@ -11,7 +11,7 @@ public class SpareFrame implements Frame {
 	
 	public SpareFrame(String spareFrameInput) {
 		if(!checkInputValidity(spareFrameInput)) {
-			throw new IllegalArgumentException("The input is invalid to create a standard frame. Please make sure it is exactly 2 characters long and only contains characters from this list: " + VALID_INPUT_CHARACTERS);
+			throw new IllegalArgumentException("The input is invalid to create a spare frame.");
 		}
 		this.firstThrow = Frame.parseCharacterIntoScore(spareFrameInput.charAt(0));
 		this.secondThrow = 10 - this.firstThrow;

@@ -6,7 +6,7 @@ public interface Frame {
 	public static final char ZERO = '-';
 	public static final int LOOKAHEAD_THROWS = 0;
 	
-	public static final String VALID_INPUT_CHARACTERS = "123456789-/X";
+	public static final String VALID_STANDARD_FRAME_CHARACTERS = "123456789-";
 	
 	int getScore();
 	int getFirstThrow();

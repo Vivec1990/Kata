@@ -9,14 +9,14 @@ public class StandardFrame implements Frame {
 	
 	public StandardFrame(String standardFrameInput) {
 		if(!checkInputValidity(standardFrameInput)) {
-			throw new IllegalArgumentException("The input is invalid to create a standard frame. Please make sure it is exactly 2 characters long and only contains characters from this list: " + VALID_INPUT_CHARACTERS);
+			throw new IllegalArgumentException("The input is invalid to create a standard frame.");
 		}
 		this.firstThrow = Frame.parseCharacterIntoScore(standardFrameInput.charAt(0));
 		this.secondThrow = Frame.parseCharacterIntoScore(standardFrameInput.charAt(1));
 	}
 	
 	public static boolean checkInputValidity(String input) {
-		return input != null && input.length() == 2 && VALID_INPUT_CHARACTERS.contains(input.charAt(0)+"") && VALID_INPUT_CHARACTERS.contains(input.charAt(1)+"");
+		return input != null && input.length() == 2 && VALID_STANDARD_FRAME_CHARACTERS.contains(input.charAt(0)+"") && VALID_STANDARD_FRAME_CHARACTERS.contains(input.charAt(1)+"");
 	}
 
 	@Override

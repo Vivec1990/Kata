@@ -11,7 +11,7 @@ public class StrikeFrame implements Frame {
 	
 	public StrikeFrame(String strikeFrameInput) {
 		if(!checkInputValidity(strikeFrameInput)) {
-			throw new IllegalArgumentException("The input is invalid to create a strike frame. Please make sure it is exactly 2 characters long and only contains characters from this list: " + VALID_INPUT_CHARACTERS);
+			throw new IllegalArgumentException("The input is invalid to create a strike frame.");
 		}
 		this.firstThrow = Frame.parseCharacterIntoScore(strikeFrameInput.charAt(0));
 		this.secondBonusThrow = 10 - this.firstThrow;
