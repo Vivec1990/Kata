@@ -9,9 +9,15 @@ public interface Frame {
 	public static final String VALID_INPUT_CHARACTERS = "123456789-/X";
 	
 	int getScore();
+	int getFirstThrow();
+	int getSecondThrow();
 
 	default int getLookAheadThrows() {
 		return LOOKAHEAD_THROWS;
+	}
+	
+	default int getBonusThrow() {
+		return 0;
 	}
 	
 	public static int parseCharacterIntoScore(char c) {

@@ -25,14 +25,17 @@ public class SpareFrame implements Frame {
 		return SCORE;
 	}
 
+	@Override
 	public int getFirstThrow() {
 		return firstThrow;
 	}
 
+	@Override
 	public int getSecondThrow() {
 		return secondThrow;
 	}
 
+	@Override
 	public int getBonusThrow() {
 		return bonusThrow;
 	}

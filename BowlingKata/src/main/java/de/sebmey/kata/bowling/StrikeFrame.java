@@ -25,16 +25,19 @@ public class StrikeFrame implements Frame {
 		return SCORE;
 	}
 
+	@Override
 	public int getFirstThrow() {
 		return firstThrow;
 	}
 
+	@Override
 	public int getSecondThrow() {
-		return secondBonusThrow;
+		return bonusThrow;
 	}
 
+	@Override
 	public int getBonusThrow() {
-		return bonusThrow;
+		return secondBonusThrow;
 	}
 	
 	@Override

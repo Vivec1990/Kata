@@ -24,10 +24,12 @@ public class StandardFrame implements Frame {
 		return this.firstThrow + this.secondThrow;
 	}
 
+	@Override
 	public int getFirstThrow() {
 		return firstThrow;
 	}
 
+	@Override
 	public int getSecondThrow() {
 		return secondThrow;
 	}
