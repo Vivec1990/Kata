@@ -48,7 +48,7 @@ public class StrikeFrame implements Frame {
 		if(input.charAt(0) != Frame.STRIKE) {
 			return false;
 		}
-		if(input.length() == 3 && input.charAt(1) != Frame.STRIKE) {
+		if(input.length() == 3 && input.charAt(0) != Frame.STRIKE) {
 			return false;
 		}
 		return true;
