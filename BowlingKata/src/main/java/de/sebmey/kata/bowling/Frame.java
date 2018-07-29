@@ -4,7 +4,6 @@ public interface Frame {
 	public static final char SPARE = '/';
 	public static final char STRIKE = 'X';
 	public static final char ZERO = '-';
-	public static final int LOOKAHEAD_THROWS = 0;
 	
 	public static final String VALID_STANDARD_FRAME_CHARACTERS = "123456789-";
 	
@@ -12,10 +11,6 @@ public interface Frame {
 	int getFirstThrow();
 	int getSecondThrow();
 
-	default int getLookAheadThrows() {
-		return LOOKAHEAD_THROWS;
-	}
-	
 	default int getBonusThrow() {
 		return 0;
 	}

@@ -3,7 +3,6 @@ package de.sebmey.kata.bowling;
 public class SpareFrame implements Frame {
 	
 	private static final int SCORE = 10;
-	private static final int LOOKAHEAD_THROWS = 1;
 	
 	private int firstThrow;
 	private int secondThrow;
@@ -40,11 +39,6 @@ public class SpareFrame implements Frame {
 		return bonusThrow;
 	}
 	
-	@Override
-	public int getLookAheadThrows() {
-		return LOOKAHEAD_THROWS;
-	}
-
 	public static boolean checkInputValidity(String input) {
 		if(input == null || input.length() < 2 || input.length() > 3) {
 			return false;

@@ -3,7 +3,6 @@ package de.sebmey.kata.bowling;
 public class StrikeFrame implements Frame {
 
 	private static final int SCORE = 10;
-	private static final int LOOKAHEAD_THROWS = 1;
 	
 	private int firstThrow;	
 	private int bonusThrow;
@@ -14,9 +13,11 @@ public class StrikeFrame implements Frame {
 			throw new IllegalArgumentException("The input is invalid to create a strike frame.");
 		}
 		this.firstThrow = Frame.parseCharacterIntoScore(strikeFrameInput.charAt(0));
-		this.secondBonusThrow = 10 - this.firstThrow;
+		if(strikeFrameInput.length() >= 2) {
+			this.bonusThrow = Frame.parseCharacterIntoScore(strikeFrameInput.charAt(1));
+		}
 		if(strikeFrameInput.length() == 3) {
-			this.bonusThrow = Frame.parseCharacterIntoScore(strikeFrameInput.charAt(2));
+			this.secondBonusThrow = Frame.parseCharacterIntoScore(strikeFrameInput.charAt(2));
 		}
 	}
 	
@@ -38,11 +39,6 @@ public class StrikeFrame implements Frame {
 	@Override
 	public int getBonusThrow() {
 		return secondBonusThrow;
-	}
-	
-	@Override
-	public int getLookAheadThrows() {
-		return LOOKAHEAD_THROWS;
 	}
 
 	public static boolean checkInputValidity(String input) {
