@@ -15,8 +15,7 @@ public class StandardFrame implements Frame {
 		this.secondThrow = Frame.parseCharacterIntoScore(standardFrameInput.charAt(1));
 	}
 	
-	@Override
-	public boolean checkInputValidity(String input) {
+	public static boolean checkInputValidity(String input) {
 		return input != null && input.length() == 2 && VALID_INPUT_CHARACTERS.contains(input.charAt(0)+"") && VALID_INPUT_CHARACTERS.contains(input.charAt(1)+"");
 	}
 

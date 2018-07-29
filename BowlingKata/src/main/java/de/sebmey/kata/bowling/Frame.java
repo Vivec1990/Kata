@@ -10,8 +10,6 @@ public interface Frame {
 	
 	int getScore();
 
-	boolean checkInputValidity(String input);
-	
 	default int getLookAheadThrows() {
 		return LOOKAHEAD_THROWS;
 	}

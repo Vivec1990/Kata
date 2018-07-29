@@ -42,8 +42,7 @@ public class StrikeFrame implements Frame {
 		return LOOKAHEAD_THROWS;
 	}
 
-	@Override
-	public boolean checkInputValidity(String input) {
+	public static boolean checkInputValidity(String input) {
 		if(input == null || input.length() < 1 || input.length() > 3) {
 			return false;
 		}
